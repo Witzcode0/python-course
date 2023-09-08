@@ -21,6 +21,12 @@ Rich Ecosystem: Python has a wide range of libraries and frameworks that simplif
 
 Python is widely used in various fields, including web development, scientific research, data analysis, automation, game development, and more. Its simplicity and versatility make it an excellent choice for both beginners and experienced programmers.
 
+
+
+
+
+
+
 Why is it called python?
 
 Python is named after the British comedy group Monty Python, which was famous for its television series "Monty Python's Flying Circus." Guido van Rossum, the creator of Python, was a fan of the show, and he chose the name Python for the programming language as a tribute to the group.
@@ -28,6 +34,12 @@ Python is named after the British comedy group Monty Python, which was famous fo
 When he began working on Python in the late 1980s, van Rossum wanted to create a programming language that was fun to use and had a readable and clean syntax. The humor and creativity of Monty Python's comedy influenced his decision to name the language Python, and he aimed to make Python as enjoyable and easy to work with as possible.
 
 The name Python is distinctive and memorable, and it has certainly contributed to the popularity of the language. Over the years, Python has gained widespread adoption and has become one of the most popular programming languages in the world, known for its simplicity and versatility. The connection to Monty Python's humor has added a touch of whimsy to the world of programming.
+
+
+
+
+
+
 
 
 features of Python :
