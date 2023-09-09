@@ -173,13 +173,80 @@ Datatypes
 data types are used to categorize and manage different types of data that can be stored and manipulated in a program. Python is a dynamically-typed language, which means you don't need to explicitly declare the data type of a variable; the interpreter infers it based on the value assigned to the variable. Python provides a wide range of built-in data types to represent various kinds of data. Here are some of the most commonly used data types in Python:
 
                                         Datatypes
-                                            |
-                        |---------|--------|-----|-------|
-                        Numeric Dictionery Boolean Set Sequence-typ
+                                           |
+                          |---------|--------|------|-------|
+                        Numeric Dictionery Boolean Set Sequence-type
                          |                               |
                     |----|------|                  |-----|----|
                     Int Float Complax            String List Tuple
 
 
 
+"""
+# Example : 
+x = 10
+print(type(x)) # <class 'int'>
+
+y = 45.6
+print(type(y)) # <class 'float'>
+
+a = 34 + 78j
+print(type(a)) # <class 'complex'>
+
+b = True
+print(type(b)) # <class 'bool'>
+
+z = 'python code'
+print(type(z)) # <class 'str'>
+
+c = list()
+c = []
+print(type(c)) # <class 'list'>
+
+d = tuple()
+d = ()
+print(type(d)) # <class 'tuple'>
+
+e = set()
+e = {1,2,4,5}
+print(type(e)) # <class 'set'>
+
+f = dict()
+f = {
+    'key1':'value1',
+    'key2':'value2',
+}
+print(type(f)) # <class 'dict'>
+
+"""
+the isinstance() function is used to check the data type of an object. It allows you to determine if an object is an instance of a particular class or if it is a subclass of that class. Here's the basic syntax of the isinstance() function:
+
+isinstance(object, classinfo)
+
+object: The object you want to check the type of.
+classinfo: A class, a type, or a tuple of classes and types to check against.
+
+"""
+
+# Check if a variable is an integer
+x = 42
+if isinstance(x, int):
+    print("x is an integer")
+
+# Check if a variable is a string or a float
+# y = "Hello, World!"
+y = 3.5
+if isinstance(y, (str, float)):
+    print("y is either a string or a float")
+
+# Check if an object is an instance of a specific class
+class Dog:
+    pass
+
+dog_instance = Dog()
+if isinstance(dog_instance, Dog):
+    print("dog_instance is an instance of the Dog class")
+
+"""
+In the first example, isinstance(x, int) checks if the variable x is an integer. In the second example, isinstance(y, (str, float)) checks if the variable y is either a string or a float. In the third example, isinstance(dog_instance, Dog) checks if dog_instance is an instance of the Dog class.
 """
