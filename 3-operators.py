@@ -134,3 +134,98 @@ z = 20
 print(x is y) # False
 print(x is not y) # True
 print( y is not z) # False
+
+# 7] Bitwise Operators
+print("\n\nBitwise Operators")
+"""
+Bitwise operators in Python are used to perform operations at the bit level of binary numbers. These operators manipulate individual bits of integers or binary numbers. Python provides the following bitwise operators:
+"""
+# Decimal	
+# 2^7 = 128	
+# 2^6 = 64	
+# 2^5 = 32	
+# -----------
+# 2^4 = 16	
+# -----------
+# 2^3 = 8	
+# 2^2 = 4	
+# 2^1 = 2
+# 2^0 = 1
+
+# Dec 3 -> Bin 0 0 1 1
+# Dec 5 -> Bin 0 1 0 1
+# Dec 18 -> Bin 1 0 0 0 1 0
+
+"""
+Bitwise AND (&):
+
+The & operator performs a bitwise AND operation between corresponding bits of two integers.
+If both bits are 1, the result is 1; otherwise, it's 0.
+"""
+a = 5  # binary: 0101
+b = 3  # binary: 0011
+result = a & b  # result: 0001 (decimal 1)
+print(result)
+
+
+"""
+Bitwise OR (|):
+
+The | operator performs a bitwise OR operation between corresponding bits of two integers.
+If at least one bit is 1, the result is 1; otherwise, it's 0.
+"""
+a = 5  # binary: 0101
+b = 3  # binary: 0011
+result = a | b  # result: 0111 (decimal 7)
+print(result)
+
+"""
+Bitwise XOR (^):
+
+The ^ operator performs a bitwise XOR (exclusive OR) operation between corresponding bits of two integers.
+If the bits are different (one is 0 and the other is 1), the result is 1; otherwise, it's 0.
+"""
+a = 5  # binary: 0101
+b = 3  # binary: 0011
+result = a ^ b  # result: 0110 (decimal 6)
+print(result)
+
+
+"""
+Bitwise NOT (~):
+
+The ~ operator performs a bitwise NOT operation on an integer, which means it inverts all the bits.
+1s become 0s, and 0s become 1s.
+"""
+
+a = 5  # binary: 0101
+result = ~a  # result: 1010 (decimal -6)
+print(result)
+
+"""
+Bitwise Left Shift (<<):
+
+The << operator shifts the bits of an integer to the left by a specified number of positions.
+It effectively multiplies the integer by 2 raised to the specified power.
+"""
+
+a = 5  # binary: 0101
+result = a << 2  # result: 20 (binary: 10100)
+print(result)
+
+
+# x = 7 - 00000111 = 7
+# x = x << 1 - 00001110 = 14
+# x = x << 3 - 01110000 = 112
+# x = x << 2 - 11000000 = 192
+
+
+"""
+Bitwise Right Shift (>>):
+
+The >> operator shifts the bits of an integer to the right by a specified number of positions.
+It effectively divides the integer by 2 raised to the specified power.
+"""
+a = 20  # binary: 10100
+result = a >> 2  # result: 5 (binary: 0101)
+print(result)
