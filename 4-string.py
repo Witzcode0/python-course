@@ -61,3 +61,79 @@ you can format strings using various techniques and methods. Here are some commo
 - % Operator (legacy formatting):Python also supports the % operator for string formatting. This method is less recommended for new code and has been largely replaced by f-strings and .format(). 
 
 """
+
+name = "Python code"
+
+# accessing element of string
+
+# indexing (+)
+print(name[4]) # o
+
+# indexing (-)
+print(name[-4]) # c
+
+# slicing (+)
+print(name[::])
+print(name[2:6:]) # thon
+# slicing (-)
+print(name[-4::]) # code
+
+# concat
+fname = "brijesh"
+lname = "gondaliya"
+print(fname + " " + lname)
+
+# replica
+code = "python"
+print(code * 3)
+
+# methods
+company_name = "MolMEH TecHNOlaB"
+
+print(company_name.swapcase()) # mOLmeh tEChnoLAb
+
+# print(company_name.count("M")) # 2
+# # print(dir(company_name))
+# print(company_name.capitalize())
+# print(company_name.title())
+# print(company_name.lower())
+# print(company_name.upper())
+
+# password = "Test@123456"
+# digit = "12344"
+# alpha = "sjkhkbg"
+# special_char = "@#$%^&*()"
+
+# print(company_name.isalnum()) # False
+# print(company_name.isdigit()) # False
+# print(company_name.isalpha()) # False
+# print(digit.isdigit()) # True
+# print(alpha.isalpha()) # True
+# print(special_char.isalnum()) # False
+# print(not special_char.isalnum()) # True
+
+
+# name = "     brijesh     "
+
+# print(len(name)) # 17
+# print(name.lstrip())
+# print(name.rstrip())
+# print(name.strip())
+
+name = "test"
+print(name.center(20, '-'))
+
+# formated string
+
+name = "brijesh"
+age = 27
+
+print("Your name is " + name + " and your age is " + str(age))
+print(f"Your name is {name} and your age is {str(age)}")
+print("Your name is {} and your age is {}".format(name, str(age)))
+print("Your name is {1} and your age is {0}".format(name, str(age)))
+
+book = "c programming"
+price = 345.65376326437
+
+print("Book name : %s and price : %.3f" % (book, price) )
