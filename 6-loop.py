@@ -37,9 +37,58 @@ while(True):
         print("You can not donate because of your age is less than 18")
 
 """
+# num = 5
+
+# for r in range(1, num+1):
+#     for c in range(1, num+1):
+#         print(c, end=" ")
+#     print("\n")
+    
+# 1 2 3 4 5
+
+# 1 2 3 4 5
+
+# 1 2 3 4 5
+
+# 1 2 3 4 5
+
+# 1 2 3 4 5
+
+
+# num = 5
+
+# for r in range(1, num+1):
+#     for c in range(1, r+1):
+#         print(" *", end=" ")
+#     print("\n")
+    
+
+
+# print(list(range(10, 0, -1)))
+
+# num = 10
+
+# for r in range(num, 0, -1):
+#     for c in range(r):
+#         print(" *", end=" ")
+#     print("\n")
+
+
+
+# num = 10
+
+# for r in range(num, 0, -1):
+#     for c in range(num, 0, -1):
+#         print(" *", end=" ")
+#     print("\n")
 
 
 
 
 
 
+# table = 50
+# start = 1
+# while (start <= 10):
+#     print(f"{table} * {start} = {table * start}")
+#     start += 1
