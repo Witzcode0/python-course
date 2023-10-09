@@ -41,4 +41,24 @@ def shuffle_():
         else:
             print("There is not avaialable mp3 files")
 
-shuffle_()
+
+def playlist():
+    empty_list = []
+    for music in musics_list:
+        print(f"Music name : {music}")
+        yesNo = input("You want to add music in playlist so press y/n : ")
+        if yesNo.lower() == 'y':
+            empty_list.append(music)
+        elif yesNo.lower() == 'n':
+            continue
+        else:
+            print("Invalid input")
+    print(empty_list)
+    for music_ in empty_list:
+        if music_.endswith(".mp3"):
+            music_file = "musics/" + music_
+            playMusic(music_file)
+        else:
+            print("There is not avaialable mp3 files")
+    
+playlist()
