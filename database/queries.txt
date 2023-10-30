@@ -1,0 +1,86 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+
+mysql> create database instagram;
+Query OK, 1 row affected (0.00 sec)
+
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| instagram          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+
+mysql> use instagram;
+Database changed
+
+
+mysql> show tables;
+Empty set (0.02 sec)
+
+
+mysql> create table users(id int auto_increment primary key, username varchar(255) not null,email varchar(50) not null, mobile varchar(50), password varchar(255) not null);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables;
++---------------------+
+| Tables_in_instagram |
++---------------------+
+| users               |
++---------------------+
+1 row in set (0.00 sec)
+
+
+mysql> describe users;
++----------+--------------+------+-----+---------+----------------+
+| Field    | Type         | Null | Key | Default | Extra          |
++----------+--------------+------+-----+---------+----------------+
+| id       | int          | NO   | PRI | NULL    | auto_increment |
+| username | varchar(255) | NO   |     | NULL    |                |
+| email    | varchar(50)  | NO   |     | NULL    |                |
+| mobile   | varchar(50)  | YES  |     | NULL    |                |
+| password | varchar(255) | NO   |     | NULL    |                |
++----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.01 sec)
+
+mysql> insert into users(username, email, mobile, password)values("brijesh07", "brijesh@gmail.com", "(+1) 111 7654 876", "test@123");
+
+mysql> select * from users;
++----+-----------+-------------------+-------------------+----------+
+| id | username  | email             | mobile            | password |
++----+-----------+-------------------+-------------------+----------+
+|  1 | brijesh07 | brijesh@gmail.com | (+1) 111 7654 876 | test@123 |
++----+-----------+-------------------+-------------------+----------+
+1 row in set (0.00 sec)
+
+mysql> create table posts(id int auto_increment primary key, title varchar(255), content varchar(255), user_id int, foreign key (user_id) references users(id));
+
+mysql> show tables;
++---------------------+
+| Tables_in_instagram |
++---------------------+
+| posts               |
+| users               |
++---------------------+
+
+mysql> describe posts;
++---------+--------------+------+-----+---------+----------------+
+| Field   | Type         | Null | Key | Default | Extra          |
++---------+--------------+------+-----+---------+----------------+
+| id      | int          | NO   | PRI | NULL    | auto_increment |
+| title   | varchar(255) | YES  |     | NULL    |                |
+| content | varchar(255) | YES  |     | NULL    |                |
+| user_id | int          | YES  | MUL | NULL    |                |
++---------+--------------+------+-----+---------+----------------+
