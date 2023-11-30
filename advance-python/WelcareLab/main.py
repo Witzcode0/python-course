@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
-
+import mysql.connector
+import dbconnection
 # Declare global variables
 entry_name = None
 entry_last_name = None
@@ -64,14 +65,24 @@ def collect_registration_data():
     password = entry_password.get()
     confirm_password = entry_confirm_password.get()
 
-    # You can now use these variables to do whatever you want with the user data
-    # For example, you can print them to the console
-    print("First Name:", first_name)
-    print("Last Name:", last_name)
-    print("Email:", email)
-    print("Mobile:", mobile)
-    print("Password:", password)
-    print("Confirm Password:", confirm_password)
+    # Create a cursor object to interact with the database
+    cursor = dbconnection.db.cursor()
+
+
+    # Create an INSERT statement
+    insert_query = "INSERT INTO users (first_name, last_name, email, mobile, password, confirm_password) VALUES (%s, %s, %s, %s, %s, %s)"
+
+    # Specify the values to be inserted
+    values = (first_name, last_name, email, mobile, password, confirm_password)
+
+    # Execute the INSERT statement
+    cursor.execute(insert_query, values)
+
+    # Commit the changes to the database
+    dbconnection.db.commit()
+
+    # Close the cursor and the database connection
+    cursor.close()
 
 def login_button_click():
     # Create a new window for user registration
